@@ -1,0 +1,78 @@
+body{  background:#ffffff;
+    margin:0;padding:0;}
+a,a:hover{text-decoration:none;}
+.my_small{font-size:0.8rem;}
+.my_gray{color:#666;}
+.my_bggray{background-color:#f8f8f8;}
+/**/
+.my_header,.my_footer{width:100%;}
+@media screen and (min-width:992px){
+    .my_header{height:7rem;}
+    .my_footer{height:40rem;}
+    .floor_top_width{width:100%;margin-left:0.1rem;}
+    .my_pb{padding-bottom:70px;}
+}
+@media screen and (max-width:991px){
+    .my_header{height:30rem;}
+    .my_footer{height:75rem;}
+    .mysize1{height:377px;}
+    .floor_top_width{width:100%;margin-left:0.1rem;}
+    .mysize1{margin-right:0.1rem; margin-left:0.2rem; !important; margin-bottom: 0.3rem;}
+    .my_pb{margin-bottom:5px;}
+    .myheight{height:100%;!important;margin-right:0.2rem; margin-left:0.2rem;}
+}
+#main .carousel-indicators li{width:10px;height:10px;
+    background-color:#fff;border-radius:50%;}
+#main .carousel-indicators .active{background-color:#0aa1ed;}
+.carousel-control-prev,.carousel-control-next{ width:3%;height:16%;
+    background-color:rgba(0,0,0,0.3);border-radius:3px; top:42%;}
+.carousel-control-prev{left:0.5rem;}
+.carousel-control-next{right:0.5rem;}
+.mysize1{height:50px;}
+.my_width1{width:28%;margin-top:3.5rem;margin-left:5rem;}
+.bgcolor1{background:#e8e8e8;}
+.myfloat-size{
+    margin-top:-13rem;
+    margin-right:2rem;
+    transition:1s;}
+.myfloat-size:hover{transform:scale(1.1,1.1);}
+/*1楼下面左图*/
+.myimg3{transition:1s;}
+.myimg3:hover{transform:scale(1.1,1.1);}
+/*1楼左下的高度*/
+.myheight{height:100%;!important;}
+.my_btn1{line-height:1.1;margin-bottom:0.4rem;}
+.myimg4{background:url(../img/bannerI.jpg);}
+.myimg5{background:url(../img1/sm.jpg);}
+.myimg6{background:url(../img1/kohsm.jpg);}
+.myimg7{background:url(../img1/maldives.jpg);}
+.myimg8{background:url(../img1/bali.jpg);}
+.myimg9{background:url(../img1/ouzhou.jpg);}
+.myimg10{background:url(../img1/aoxin.jpg);}
+.myimg11{background:url(../img1/hen.jpg);}
+.myimg_size{background-size:100%; width:289px; height:277px;}
+.myimg_size1{background-size:100%; width:565px; height:277px;}
+.myimg_size2{background-size:100%; width:565px; height:554px;}
+.myimg_size3{background-size:100%; width:574px; height:277px;}
+.myhover:hover{display:block;transform:translateY(-9px);background-color:rgba(98,0,187,0.3);height:279px;}
+.myhover1:hover{display:block;transform:translateY(-9px);background-color:rgba(98,0,187,0.3);height:555px;}
+.hei{transform:translateY(200px);}
+.my_gray1{color:#ff6500;}
+.my_gray4{color:#000;}
+.my_gray2{background-color:#ff6500;}
+.my_gray3{background-color:#f4f4f4;}
+.my_rounded{border-radius: 3rem !important;}
+.myhover2:hover{background-color:rgba(106,68,136,1);}
+.myhover3:hover{color:rgba(255,255,255,1);}
+.myhover4:hover{color:#ff6500;}
+.myhover5 {display:none;}
+.myhover:hover a{display:block;}
+.myhover1:hover a{display:block;}
+.a1{width: 100px;border: 1px solid #ffffff;margin-left:93px;}
+.a2{width: 100px;border: 1px solid #ffffff;margin-left:235px;}
+.a3{width: 100px;border: 1px solid #ffffff;margin-left:235px;margin-top:205px; }
+.myi:hover{transform: scale(1.1);transition: 1s;}
+.myhover6:hover .myhover5{display:block;background:#fff;position:relative;bottom:0px;}
+.border1{border:1px solid #EBEBEB;border-radius:40%;border-radius:100px;}
+.myhove7 a:hover {color:#ff6500 !important;}
+

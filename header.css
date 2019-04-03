@@ -1,0 +1,17 @@
+body{background:#FFFFFF;margin:0;padding:0;}
+a,a:hover{text-decoration:none;}
+a:hover{color:#ff6500 !important;}
+.my_small{font-size:0.8rem;}
+.my_large{font-size: 1.3rem;}
+.my_gray{color:#666;}
+.my_gray1{color:#ff6500 !important;}
+.bg_gray{border-color:#ccc;}
+.my_rounded{border-radius: 3rem !important;}
+.breadcrumb-item + .breadcrumb-item::before {content: "|";}
+.jc:hover+div,.navhidden:hover{display: block;z-index:20;}
+.navhidden {background:rgba(241,242,255,0.9); position: absolute;
+    display: none;width:500px; }
+.navhidden > ul > li {list-style: none;}
+.navhidden > ul > li > a {color: #999;font-size: 14px;}
+.navhidden > ul > li {margin: 18px 10px;}
+.navhidden > ul > li > a:hover {color: #fff;}
