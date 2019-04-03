@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/login.css"/>
+	<style>
+		.logo{width:1000px;
+					height:100px;
+			margin-left:200px;}
+		.logo1{display:inline-block;margin-left:500px;font-size:0.8rem;
+		line-height:100px;position:absolute;}
+		.logo2{ height: 500px;
+			background:url("img1/download.jpg");
+		}
+        .breadcrumb-item + .breadcrumb-item::before {content: "|";}
+        .my_gray{color:#000;}
+        .my_small{font-size:0.8rem;}
+        .my_gray1{color:#FFFFFF;}
+        .my_mar{transform:translate(500px,200px);}
+        .my_mar1{transform:translate(950px,-60px);}
+	</style>
+</head>
+<body>
+	<div class="logo pl-5">
+		<span><img src="img1/logo.png" alt=""></span>
+		<span class="logo1">你好，欢迎登录蜜游网</span>
+	</div>
+	<div class="logo2">
+        <div class="my_gray1 my_mar">
+            <p>1.一对一规划师服务</p>
+            <p>2.更便捷的接收规划师方案</p>
+            <p>3.更方便查看与规划师聊天记录</p>
+        </div>
+        <div class="my_mar1">
+            <div class="tabs">
+                <ul id="tab">
+                    <li><a href="#content1"data-target="content1"data-toggle="tab">微信登录</a></li>
+                    <li><a href="#content2"data-target="content2"data-toggle="tab">账号登录</a></li>
+                </ul>
+                <div id="container">
+                    <div id="content1">
+                        <img class="w-100" src="img1/meyouone.jpg" alt="">
+                    </div>
+                    <div id="content2">
+                        <form id="form1">
+                            <table class="mt-5" >
+                                <tr>
+                                    <td>账号：</td>
+                                    <td>
+                                        <input name="username"/>
+                                        <span>*</span>
+                                    </td>
+                                    <td>
+                                        <div class="vali_info">
+                                            字符、字母、数字组合
+                                        </div>
+                                    </td>
+                                 </tr>
+                                <tr>
+                                    <td>密码：</td>
+                                    <td>
+                                        <input type="password" name="pwd"/>
+                                        <span>*</span>
+                                    </td>
+                                    <td>
+                                        <div class="vali_info">6位数字</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>邮箱：</td>
+                                    <td>
+                                        <input name="username"/>
+                                        <span>*</span>
+                                    </td>
+                                    <td>
+                                        <div class="vali_info">
+                                            @
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td colspan="2">
+                                        <input class="mt-3 ml-3" type="submit" value="登录"/>
+                                        <input class="ml-4" type="reset" value="忘记密码"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container  mr-5 mt-5" >
+        <div class="pl-5 ">
+            <ul class="breadcrumb bg-transparent pt-4 pl-5 ">
+                <li class="breadcrumb-item my_small pl-5"><a class="my_gray pl-5" href="about_me.html" target="_blank">关于我们</a></li>
+                <li class="breadcrumb-item my_small"><a class="my_gray" href="contact_me.html" target="_blank">联系我们</a></li>
+                <li class="breadcrumb-item my_small"><a class="my_gray" href="">加入我们</a></li>
+                <li class="breadcrumb-item my_small"><a class="my_gray" href="about_honey.html" target="_blank">专注蜜月旅行</a></li>
+                <li class="breadcrumb-item my_small"><a class="my_gray" href="">行程规划师实地亲测</a></li>
+                <li class="breadcrumb-item my_small"><a class="my_gray" href="about_time.html" target="_blank">行程管家24小时贴心服务</a></li>
+            </ul>
+        </div>
+        <p class="border mt-4 mr-5"></p>
+        <p class="my_small text-center mt-3">出境旅游许可证号：L-SC-CJ00007</p>
+        <p class="my_small text-center">Copyright2015 © 蜜游网 All Rights Reserved. 蜀ICP备15001199号</p>
+    </div>
+    <script>
+        document.getElementById("content1")
+                .style.zIndex=9;
+        var tabs=document.querySelectorAll(
+                "[data-toggle=tab]"
+        );
+        console.log(tabs);
+        var n=10;
+        for(var tab of tabs){
+            tab.onclick=function(){
+                var tab=this;
+                var id=tab.getAttribute("data-target");
+                var content=document.getElementById(id);
+                content.style.zIndex=n;
+                n++;
+            }
+        }
+    </script>
+    <script>
+        var txtName=
+                document.getElementsByName("username")[0];
+        var txtPwd=
+                document.getElementsByName("pwd")[0];
+        txtName.onfocus=txtPwd.onfocus=function(){
+            var txt=this;
+            var div=
+                    txt.parentNode
+                       .nextElementSibling
+                       .children[0];
+            txt.className="txt_focus";
+            div.className="";
+        }
+        txtName.onblur=function(){
+            vali(this,/^\w{1,10}$/);
+        }
+        function vali(txt,reg){
+            var div=
+                    txt.parentNode
+                            .nextElementSibling
+                            .children[0];
+            txt.className="";
+            if(reg.test(txt.value)==true){
+                div.className="vali_success";
+            }else{
+                div.className="vali_fail";
+            }
+        }
+        txtPwd.onblur=function(){
+            vali(this,/^\d{6}$/);
+        }
+    </script>
+</body>
+</html>
